@@ -596,27 +596,6 @@ section.main-content {
 .feature-code .token-str     { color: var(--clr-token-str); }
 .feature-code .token-comment { color: var(--clr-token-comment); }
 
-@media (max-width: 1100px) {
-  .feature-body {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .feature-preview {
-    width: 100%;
-    min-width: unset;
-    min-height: 140px;
-  }
-
-  .feature-right {
-    padding-bottom: 0;
-  }
-
-  .feature-code code {
-    font-size: 12px;
-  }
-}
-
 
 
 /* section class="contact-section" */
