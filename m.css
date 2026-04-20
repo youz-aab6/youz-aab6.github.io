@@ -1,0 +1,94 @@
+@media (max-width: 768px) {
+
+  /* ─── 장식 fixed 요소 숨김 ─── */
+  /* person-float / scene-bg 는 JS가 제어하는 fixed 레이어 */
+  /* 모바일에서는 스크롤 스냅이 동작하지 않으므로 숨김 처리 */
+  .scene-bg,
+  .person-float {
+    display: none;
+  }
+
+
+  /* ─── hero ─── */
+  section.hero {
+    height: auto;
+    min-height: 100svh;
+    background: var(--clr-white);
+    flex-direction: column;
+  }
+
+  .hero-illust {
+    display: none;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 80px 28px 60px;
+  }
+
+
+  /* ─── work wrapper ─── */
+  .work-wrapper {
+    flex-direction: column;
+  }
+
+  section.work-section {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    overflow-y: visible;
+    position: static;
+  }
+
+  .sidebar {
+    padding: 40px 28px;
+  }
+
+  /* sidebar-photo 는 HTML에 img가 없어서 숨김 처리 */
+  .sidebar-photo {
+    display: none;
+  }
+
+
+  /* ─── JS 상태 초기화 ─── */
+  /* 기본 상태: clip-path: inset(0 0 0 100%) → 해제 */
+  /* is-work 상태: clip-path: inset(0 0 0 0%) → 동일하게 해제 */
+  section.main-content,
+  .work-wrapper.is-work .main-content {
+    clip-path: none;
+    padding: 40px 28px;
+    gap: 60px;
+  }
+
+
+  /* ─── 타이포 크기 ─── */
+  .clone-text,
+  .personal-text {
+    font-size: 28px;
+  }
+
+  .detail-title {
+    font-size: 24px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+  }
+
+
+  /* ─── contact ─── */
+  .contact-inner {
+    padding: 0 28px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}
